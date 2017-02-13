@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Panorama</title>
+    <meta name="description" content="Panorama — A-Frame">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="aframe.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+        <a-asset-item id="toilet-obj" src="toilet_obj_1.obj"></a-asset-item>
+      </a-assets>
+
+      <a-sky src="background.jpeg" rotation="0 -130 0"></a-sky>
+      <a-entity id="toilet"
+          obj-model="obj: #toilet-obj"
+          scale=".1 .1 .1"
+          rotation="0 0 0"
+          position="0 0 -2"></a-entity>
+
+      </a-scene>
+
+      <script>
+        var keys = Object.create(null);
+        $(window).keydown(function(e){
+          if(String.fromCharCode(e.keyCode || e.charCode)) == 'q'{
+            console.log("here");
+          }
+        });
+
+      </script>
+
+  </body>
+</html>
