@@ -13,11 +13,13 @@
 
       <a-assets>
         <a-asset-item id="toilet-obj" src="toilet_obj_1.obj"></a-asset-item>
+        <a-asset-item id="treadmill" src="treadmill.obj"></a-asset-item>
+
       </a-assets>
 
       <a-sky src="background.jpg" rotation="0 0 0"></a-sky>
       <a-entity id="toilet"
-          obj-model="obj: #toilet-obj"
+          obj-model="obj: #treadmill"
           scale=".1 .1 .1"
           rotation="0 0 0"
           position="0 0 -2"></a-entity>
@@ -47,6 +49,8 @@
                       }
                       if(key == 'x')
                         dy=-.3;
+                      if(key == 't')
+                        document.getElementById("toilet").setAttribute("obj-model","obj: #toilet-obj")
             }
 
             setInterval(function(){
